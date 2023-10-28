@@ -88,10 +88,49 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Generate a password when the button is clicked.
+
+// Length of password:
+
+// At least 8 characters but no more than 128.
+
+// Character types:
+
+// Lowercase
+
+// Uppercase
+
+// Numeric
+
+// Special characters ($@%&*, etc.)
+
+// Code should validate for each input and at least one character type should be selected.
+
+// Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
+
+
+// A series of prompts created for password criteria: 8 to 128 characters, lowercase, uppercase, numeric, special characters
+var passwordLength = prompt("Enter password length from 8 to 128 characters: ");
+var charLowercase = prompt("Press /' OK/ ' to add Lowercase characters: ");
+var charUppercase = prompt("Press /' OK/ ' to add Uppercase characters: ");
+var charNumeric = prompt("Press /' OK/ ' to add Numeric characters: ");
+var charSpecial = prompt("Press /'OK/ ' to add Special ($@%&*, etc.) characters: ");
+
+
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  // password options/prompts have been console logged in getPasswordOptions to present it to the user
+      console.log(passwordLength);
+      
+      console.log(charLowercase);
+      console.log(charUppercase);
+      console.log(charNumeric);
+      console.log(charSpecial);
+      return
 }
+// getPasswordOptions function is called
+getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
