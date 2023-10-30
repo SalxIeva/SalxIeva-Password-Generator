@@ -177,6 +177,13 @@ function generatePassword() {
     if (charUppercase) validChars += upperCasedCharacters;
     if (charNumeric) validChars += numericCharacters;
     if (charSpecial) validChars += specialCharacters;
+    // generate password 
+    var password = '';
+    for (var i = 0; i < passwordLength; i++) {
+      var randomChar = Math.floor(Math.random() * validChars.length);
+      password += validChars.charAt(randomChar);
+    }
+    return password;
   }
 }
 
