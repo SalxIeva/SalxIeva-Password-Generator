@@ -134,10 +134,10 @@ while(true) {
     }
   }
 }
-var charLowercase = prompt("Press 'OK' to add Lowercase characters: ");
-var charUppercase = prompt("Press 'OK' to add Uppercase characters: ");
-var charNumeric = prompt("Press 'OK 'to add Numeric characters: ");
-var charSpecial = prompt("Press 'OK' to add Special ($@%&*, etc.) characters: ");
+var charLowercase = confirm("Press 'OK' to add Lowercase characters: ");
+var charUppercase = confirm("Press 'OK' to add Uppercase characters: ");
+var charNumeric = confirm("Press 'OK 'to add Numeric characters: ");
+var charSpecial = confirm("Press 'OK' to add Special ($@%&*, etc.) characters: ");
 
 
 
@@ -155,13 +155,29 @@ function getPasswordOptions() {
 getPasswordOptions();
 
 // Function for getting a random element from an array
-function getRandom(arr) {
-  
-}
+function getRandom(arr) {}
+//   oneArray = lowerCasedCharacters.concat(upperCasedCharacters + numericCharacters + specialCharacters);
+//   oneArray.getRandom 
+//   // console.log(oneArray);
+//   // return
+// }
+// getRandom();
 
+
+// check if at least one character has been selected
+if (!(charLowercase || charUppercase || charNumeric || charSpecial)) 
+{ // alert the user if he hasn't selected any of the options
+  alert("You  must select at least one character type for the password")
+} else {
 // Function to generate password with user input
 function generatePassword() {
-
+// var validChars added to validate users selection
+    var validChars = '';
+    if (charLowercase) validChars += lowerCasedCharacters;
+    if (charUppercase) validChars += upperCasedCharacters;
+    if (charNumeric) validChars += numericCharacters;
+    if (charSpecial) validChars += specialCharacters;
+  }
 }
 
 // Get references to the #generate element
