@@ -155,9 +155,11 @@ function getPasswordOptions() {
 getPasswordOptions();
 
 // Function for getting a random element from an array
-function getRandom(arr) {
-  // for (var i = 0; i < )
-}
+
+// function getRandom(arr) {
+//   // for (var i = 0; i < )
+// }
+
 //   oneArray = lowerCasedCharacters.concat(upperCasedCharacters + numericCharacters + specialCharacters);
 //   oneArray.getRandom 
 //   // console.log(oneArray);
