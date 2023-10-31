@@ -155,7 +155,9 @@ function getPasswordOptions() {
 getPasswordOptions();
 
 // Function for getting a random element from an array
-function getRandom(arr) {}
+function getRandom(arr) {
+  // for (var i = 0; i < )
+}
 //   oneArray = lowerCasedCharacters.concat(upperCasedCharacters + numericCharacters + specialCharacters);
 //   oneArray.getRandom 
 //   // console.log(oneArray);
@@ -163,29 +165,42 @@ function getRandom(arr) {}
 // }
 // getRandom();
 
+// var validChars added to validate users selection
+
+// var validChars = '';
 
 // check if at least one character has been selected
-if (!(charLowercase || charUppercase || charNumeric || charSpecial)) 
-{ // alert the user if he hasn't selected any of the options
-  alert("You  must select at least one character type for the password")
-} else {
+
+// if (!(charLowercase || charUppercase || charNumeric || charSpecial)) { 
+  
+//   // alert the user if he hasn't selected any of the options
+
+//   alert("You  must select at least one character type for the password")
+// } else {
+
 // Function to generate password with user input
+
 function generatePassword() {
-// var validChars added to validate users selection
-    var validChars = '';
-    if (charLowercase) validChars += lowerCasedCharacters;
-    if (charUppercase) validChars += upperCasedCharacters;
-    if (charNumeric) validChars += numericCharacters;
-    if (charSpecial) validChars += specialCharacters;
+  validChars = [];
+
+    if (charLowercase) validChars = validChars.concat(lowerCasedCharacters);
+    if (charUppercase) validChars = validChars.concat(upperCasedCharacters);
+    if (charNumeric) validChars = validChars.concat(numericCharacters);
+    if (charSpecial) validChars = validChars.concat(specialCharacters);
+
+    if (validChars.length === 0) {
+      alert("You must select at least one character type for the password");
+      return '';
+    }
     // generate password 
     var password = '';
     for (var i = 0; i < passwordLength; i++) {
       var randomChar = Math.floor(Math.random() * validChars.length);
-      password += validChars.charAt(randomChar);
+      password += validChars[randomChar];
     }
     return password;
   }
-}
+// }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
