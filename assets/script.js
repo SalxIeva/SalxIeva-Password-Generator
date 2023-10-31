@@ -88,30 +88,8 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Generate a password when the button is clicked.
-
-// Length of password:
-
-// At least 8 characters but no more than 128.
-
-// Character types:
-
-// Lowercase
-
-// Uppercase
-
-// Numeric
-
-// Special characters ($@%&*, etc.)
-
-// Code should validate for each input and at least one character type should be selected.
-
-// Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
-
-
 // A series of prompts created for password criteria: 8 to 128 characters, lowercase, uppercase, numeric, special characters
 
-// var passwordLength = prompt("Enter password length from 8 to 128 characters: ")
 // passwordLength prompt raised for user
 var passwordLength;
 // while loop to make sure that user enters the number between 8 to 128
@@ -134,6 +112,7 @@ while(true) {
     }
   }
 }
+// options for OK(select)
 var charLowercase = confirm("Press 'OK' to add Lowercase characters: ");
 var charUppercase = confirm("Press 'OK' to add Uppercase characters: ");
 var charNumeric = confirm("Press 'OK 'to add Numeric characters: ");
@@ -155,47 +134,25 @@ function getPasswordOptions() {
 getPasswordOptions();
 
 // Function for getting a random element from an array
-
-// function getRandom(arr) {
-//   // for (var i = 0; i < )
-// }
-
-//   oneArray = lowerCasedCharacters.concat(upperCasedCharacters + numericCharacters + specialCharacters);
-//   oneArray.getRandom 
-//   // console.log(oneArray);
-//   // return
-// }
-// getRandom();
-
-// var validChars added to validate users selection
-
-// var validChars = '';
-
 // check if at least one character has been selected
-
-// if (!(charLowercase || charUppercase || charNumeric || charSpecial)) { 
-  
-//   // alert the user if he hasn't selected any of the options
-
-//   alert("You  must select at least one character type for the password")
-// } else {
-
 // Function to generate password with user input
 
 function generatePassword() {
   validChars = [];
+  // var validChars added to validate users selection
 
     if (charLowercase) validChars = validChars.concat(lowerCasedCharacters);
     if (charUppercase) validChars = validChars.concat(upperCasedCharacters);
     if (charNumeric) validChars = validChars.concat(numericCharacters);
     if (charSpecial) validChars = validChars.concat(specialCharacters);
-
+// alert created to make sure that at least one character type would be selected
     if (validChars.length === 0) {
       alert("You must select at least one character type for the password");
       return '';
     }
     // generate password 
     var password = '';
+    // for loop added to create password with users choices by selecting array objects randomly
     for (var i = 0; i < passwordLength; i++) {
       var randomChar = Math.floor(Math.random() * validChars.length);
       password += validChars[randomChar];
