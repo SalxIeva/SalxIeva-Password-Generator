@@ -32,6 +32,8 @@ Please refer to the LICENSE in the repo.
 
 ## URL
 
-https://salxieva.github.io/SalxIeva.Console-Finances/
+https://salxieva.github.io/SalxIeva-Password-Generator/
 
 ## Screenshoot
+
+![image](https://github.com/SalxIeva/SalxIeva-Password-Generator/assets/133906072/26c55dd3-49f6-497f-8885-b5cca8f992ed)
